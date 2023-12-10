@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Google Hacking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.navbar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="nav1">
+  <div class="navbar">
+    <a href="#" class="navButton">Home</a>
+    <a href="#Intro" class="navButton">Intro</a>
+    <a href="#Operators" class="navButton">Operators</a>
+    <a href="#Examples" class="navButton">Examples</a>
+    <a href="#Preventions" class="navButton">Preventions</a>
+    <a href="#Conclusions" class="navButton">Conclusions</a>
+    <a href="#References" class="navButton">References</a>
+  </div>
+
+  
+</div>
+
+<!-- Header -->
+<header class="hero">
+  <h1 class="heroMText">Google Hacking</h1>
+  <p style="font-size: 24px">VSB-TU Ostrava - 2023/24</p>
+</header>
+
+<!-- intro -->
+<div class="w3-row-padding w3-padding-64 w3-container" id="Intro">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>What is Google Hacking?</h1>
+      <h5 class="w3-padding-32">
+        Google Hacking, or Google Dorking, is a hacker technique to find information about vulnerable websites.
+      </h5>
+
+      <p class="w3-text-grey">
+        Google Hacking is not about hacking Google. It consists of using specific search commands with special search parameters and operators in Google to uncover information that is not usually found in regular Google Searches.
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="assets/googleLogo.png" alt="googleLogo" class="imgP" width="200">
+    </div>
+  </div>
+</div>
+
+<!-- basic ops -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Operators">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+        <img src="assets/plusSign.png" alt="googleLogo" class="imgP" width="300">
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Basic Operators</h1>
+      <h5 class="w3-padding-32">
+        The basis of Google Hacking is using the Google Search operators to find more specific information. However, there are a lot of operators, so we'll start with the more basic ones:
+      </h5>
+
+      <ul>
+        <li>
+            <b>OR</b> or <b>|</b> : Finds results related to one or two search terms. Try it:  <a href="https://www.google.com/search?q=book+OR+computer">book OR computer.</a>
+        </li>
+        <li>
+            <b>" "</b> : Finds results that include that exact phrase. Try it: <a href="https://www.google.com/search?q=%E2%80%9Crestaurant+in+ostrava%E2%80%9D">"restaurant in ostrava"</a>
+        </li>
+        <li>
+            <b>in</b> : Lets you convert an unit in another. Try it: <a href="https://www.google.com/search?q=15+eur+in+czk">15 eur in czk</a>
+        </li>
+        <li>
+            <b>*</b> : It is used as an wild card and fills the missing word or phrase. Try it: <a href="https://www.google.com/search?q=best+*+in+Ostrava">best * in Ostrava</a>
+        </li>
+        <li>
+            <b>-</b> : Exclude a particular term or phrase from the search. Try it: <a href="https://www.google.com/search?q=web+security+-jobs">web security -jobs</a>
+        </li>
+        <li>
+            ... and more.
+         </li>
+      </ul>
+
+      
+    </div>
+  </div>
+</div>
+<!-- adv operators -->
+<div class="w3-row-padding w3-padding-64 w3-container" >
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Advanced Operators</h1>
+        <h5 class="w3-padding-32">
+            Now that we know some basic operators, we'll look at more advanced operators. This type of operators will be handy for the actual Google hacking.
+            Some advanced operators are:
+        </h5>
+  
+        <ul>
+            <li>
+                <b>cache:</b> - Exclude a particular term or phrase from the search. Try it: <a href="https://www.google.com/search?q=allintext:cyber+threat">allintext:cyber threat</a>
+            </li>
+            <li>
+                <b>site:</b> - Search in a specific Website. Try it:  <a href="https://www.google.com/search?q=site:vsb.cz+Computer+Science">site:vsb.cz Computer Science</a>
+            </li>
+            <li>
+                <b>filetype:</b> - Finds specific file types. Try it: <a href="https://www.google.com/search?q=filetype:pdf+web+security">"filetype:pdf web security"</a>
+            </li>
+            <li>
+                <b>intitle:</b> - Finds pages with specific titles. Try it: <a href="https://www.google.com/search?q=intitle%3A%E2%80%9Ddata+privacy%E2%80%9D">intitle:”data privacy”</a>
+            </li>
+            <li>
+                <b>link:</b> - Finds pages that link to a specific URL. Try it: <a href="https://www.google.com/search?q=link:https://www.vsb.cz/en/study/">link:https://www.vsb.cz/en/study/</a>
+            </li>
+            <li>
+                <b>intext:</b> - Searches a specific text on Webpages. Try it: <a href="https://www.google.com/search?q=intext:computers">intext:computers</a>
+            </li>
+
+
+            <li>
+                ... and more.
+             </li>
+          </ul>
+      </div>
+
+
+  
+      <div class="w3-third w3-center">
+        <img src="assets/searchIcon.png" alt="Search" class="imgP" width="300">
+      </div>
+    </div>
+  </div>
+
+<!-- logs -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Examples">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/logExample.png" alt="googleLogo" class="imgP" width="300">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>Examples : <b>Log files</b></h1>
+        <h5 class="w3-padding-32">
+            Many types of logs, like error logs or access logs, can be often discovered in the public space of websites. These logs can help hackers get information about the technologies used in that application and other types of critical data.
+        </h5>
+
+        <h6>
+            To find this we have to use two operatores, <b>allintext</b> and <b>filetype</b>, for example:
+        </h6>
+
+        <h5 style="color: green;"><a href="https://www.google.com/search?q=filetype%3Alog+allintext%3Ausername">filetype:log allintext:username</a> </h5>
+
+        <p class="w3-text-grey">
+            In the picture on the left we can see an ouput of this search. The picture is not complete to protect the data on it.
+        </p>
+  
+        
+  
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- VWS -->
+<div class="w3-row-padding w3-padding-64 w3-container" >
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Examples : <b>Vulnerable Web Servers</b></h1>
+        <h5 class="w3-padding-32">
+          We can find vulnerable web servers searching, for example, for websites that allow appending "/proc/self/cwd/" to the URL.
+        </h5>
+  
+        <h6>
+            To find this we have to use the <b>inurl</b> operator for example:
+        </h6>
+
+        <h5 style="color: green;"><a href="https://www.google.com/search?q=inurl%3A%2Fproc%2Fself%2Fcwd%0D%0A%0D%0A">inurl:/proc/self/cwd
+
+        </a> </h5>
+
+        <p class="w3-text-grey">
+            In the picture on the right we can see an ouput of this search. The picture is not complete to protect the data on it.
+        </p>
+
+      </div>
+  
+      <div class="w3-third w3-center">
+        <img src="assets/vserver.png" alt="Vulnerable Servers" class="imgP" width="300">
+      </div>
+    </div>
+  </div>
+
+  <!-- ftp -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Examples">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/ftpServer.png" alt="googleLogo" class="imgP" width="300">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>Examples : <b>Open FTP Servers</b></h1>
+        <h5 class="w3-padding-32">
+            Google does not only index HTTP servers but also FTP servers which often hold large amounts of files and can contain interesting things.
+        </h5>
+
+        <h6>
+            To explore open FTP Servers we have to use two operatores, <b>intitle</b> and <b>inurl</b>, for example:
+        </h6>
+
+        <h5 style="color: green;"><a href="https://www.google.com/search?q=intitle%3A%22index+of%22+inurl%3Aftp">intitle:"index of" inurl:ftp</a> </h5>
+
+        <p class="w3-text-grey">
+            In the picture on the left we can see an ouput of this search. The picture is not complete to protect the data on it.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Env -->
+  <div class="w3-row-padding w3-padding-64 w3-container" >
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Examples : <b>ENV Files</b></h1>
+        <h5 class="w3-padding-32">
+            .env files are used by most web development frameworks to declare variables and configurations for local and online dev environments.
+            The recommended practice it to move this files to a place that is not publicly accessible. However, there are a lot of cases that this doesn't happend and we can find a critical information in them.
+        </h5>
+  
+        <h6>
+            To find this we have to use the <b>filetype</b> operator for example:
+        </h6>
+
+        <h5 style="color: green;"><a href="https://www.google.com/search?q=DB_USERNAME+filetype%3Aenv">DB_USERNAME filetype:env
+
+        </a> </h5>
+
+        <p class="w3-text-grey">
+            In the picture on the right we can see an ouput of this search. The picture is not complete to protect the data on it.
+        </p>
+
+      </div>
+  
+      <div class="w3-third w3-center">
+        <img src="assets/envFiles.png" alt="EnvFiles" class="imgP" width="300">
+      </div>
+    </div>
+  </div>
+
+  <!-- Cameras -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Examples">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/liveCamera.png" alt="liveCamera" class="imgP" width="300">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>Examples : <b>Live Cameras</b></h1>
+        <h5 class="w3-padding-32">
+            Due to bad configuration, private live cameras can be watched not only by the owner but also by any person online. This happens because the IP of this live cameras' web pages is not restricted.
+        </h5>
+
+        <h6>
+            To find these live camera web pages we have to use the <b>intitle</b> operator, for example:
+        </h6>
+
+        <h5 style="color: green;"><a href="https://www.google.com/search?q=intitle%3A%22webcamXP+5%22">intitle:"webcamXP 5"</a> </h5>
+
+        <p class="w3-text-grey">
+            In the picture on the left we can see an ouput of this search. The picture is not complete to protect the data on it.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Robot -->
+  <div class="w3-row-padding w3-padding-64 w3-container" id="Preventions" >
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Preventions : <b>Robots.txt</b></h1>
+        <h5 class="w3-padding-32">
+            The robots.txt file is used to manage crawler traffic in a specific website. It contains a list of "rules" about who are allowed and who are not allowed to look in a website's directory structure.
+            This means that the robots.txt file can give similar information to "Sitemaps". Here are a few keywords:
+        </h5>
+
+        <ul>
+            <li>
+                <b>User-agent</b> - Specify the type of crawler that can index the website.
+            </li>
+            <li>
+                <b>Allow</b> - Specify the files or directories that the crawler can index.
+            </li>
+            <li>
+                <b>Disallow</b> - Specify the files or directories that the crawler can't index.
+            </li>
+            <li>
+                <b>Sitemap</b> - Reference to where the Sitemap is located.
+            </li>
+            
+          </ul>
+  
+        
+
+        <p class="w3-text-grey">
+            The robots.txt file should not be used as means to hide a webpage from Google. To do it we should use the <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">noindex</a> rule.
+        </p>
+
+      </div>
+  
+      <div class="w3-third w3-center">
+        <img src="assets/robot.png" alt="Robot" class="imgP" width="200">
+      </div>
+    </div>
+  </div>
+
+  <!-- Ghdb -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Examples">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/ghdb.png" alt="ghdb" class="imgP" width="200">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>Preventions : <b>GHDB</b></h1>
+        <h5 class="w3-padding-32">
+            The <a href="https://www.exploit-db.com/google-hacking-database">Google Hacking Database(GHDB)</a> is not a standand database, but rather a repository of operators, queries and search methods designed to locate specific categories of information and potential security flaws.
+            The existence of this kind of repository helps developers and ethical hackers gain a deeper understanding of potential security risks in their websites.
+        </h5>
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Conclusions -->
+  <div class="w3-row-padding w3-padding-64 w3-container" id="Conclusions">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Conlusions</h1>
+        <h5 class="w3-padding-32">
+            To conclude, this project has highlighted the potential risks associated with the improper use of Google Hacking as they can be used for malicious activities such as data breaches, information gathering and unauthorized access.
+            It is important for developers and organizations to be aware of the vulnerabilities exposed through this type of searches and take measures to safeguard their online presence.
+        </h5>
+
+      </div>
+  
+      <div class="w3-third w3-center">
+        <img src="assets/conclusion.png" alt="Conclusion" class="imgP" width="250">
+      </div>
+    </div>
+  </div>
+
+    <!-- Refs -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="References">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/refs.png" alt="ghdb" class="imgP" width="250">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>References</h1>
+        <br>
+        <br>
+        
+        <ul>
+            <li>
+                <a href="https://www.semrush.com/blog/google-search-operators/#list-of-35+-google-search-operators">List of 35+ Google Search Operators</a>
+            </li>
+            <li>
+                <a href="https://securitytrails.com/blog/google-hacking-techniques">Top 20 Google Hacking Techniques</a>
+            </li>
+            <li>
+                <a href="https://www.exploit-db.com/google-hacking-database">GHDB</a>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/what-is-google-dorking/">What is Google Dorking?</a>
+            </li>
+
+            <li>
+                Class Materials
+            </li>
+            
+          </ul>
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">José Silva - ABR0024</h1>
+</div>
+
+
+
+
+
+</body>
+</html>

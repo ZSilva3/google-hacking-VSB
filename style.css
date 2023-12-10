@@ -1,0 +1,70 @@
+.nav1{
+    top:0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar{
+    color: #000;
+    background-color: #299e5c;
+    text-align: left;
+    font-size: 18px!important;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    width: 100%;
+    overflow: hidden;
+}
+
+.navButton{
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #299e5c;
+    padding: 12px 24px;
+}
+
+.navButton:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+.hero{
+    padding: 128px 16px;
+    color: #fff;
+    background-color: #299e5c;
+    text-align: center;
+}
+
+.heroMText{
+    margin: 16px;
+    font-size: 64px;
+}
+
+.imgP{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+.mainContainer{
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+    padding: 0.01em 16px;
+}
+
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
