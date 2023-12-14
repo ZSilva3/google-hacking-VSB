@@ -284,6 +284,65 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 
+  <!-- DBDEL -->
+  <div class="w3-row-padding w3-padding-64 w3-container" id="Preventions" >
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Further Atacks : <b>DB Deletion</b></h1>
+        <h5 class="w3-padding-32">
+            After finding all the settings and credentials from a database in a vulnerable ENV file is really easy to do anything to the database content. That's why is so dangerous to leave this kind of iformation so exposed.
+            One example can be deleting the whole database with a command like this:
+        </h5>
+
+        <h4>DROP DATABASE databasename;</h4>
+
+
+
+      </div>
+  
+      <div class="w3-third w3-center">
+        <img src="assets/dbDel.png" alt="deDel" class="imgP" width="200">
+      </div>
+    </div>
+  </div>
+
+  <!-- FTP BF -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Examples">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+          <img src="assets/hydraftp.png" alt="hydraftp" class="imgP" width="300">
+      </div>
+  
+      <div class="w3-twothird">
+        <h1>Further Atacks : <b>Brute Force FTP Credentials</b></h1>
+        <h5 class="w3-padding-32">
+            After finding an open FTP server we can use tools like <a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a> or <a href="https://nmap.org/ncrack/">Ncrack</a>
+             to find the credentials by Brute-Force. In this example, we will use <a href="https://docs.rapid7.com/metasploit/metasploitable-2/">Metasploitable-2</a> to simulate an open ftp server and <a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a> to get its credentials.
+             After finding an open ftp we only need to do some simple steps to get the credentials:
+        </h5>
+
+        <ul>
+          <li>
+              <b>1.</b> Have two files with lists of common usernames and common passwords.
+          </li>
+          <li>
+              <b>2.</b> Use this code on hydra where <b>-L</b> is used to set the username list and <b>-P</b> is used for the password list:
+              <h4>hydra -L usernames.txt -P passwords.txt ftp://(serverIpAddress)</h4>
+          </li>
+          
+          
+        </ul>
+
+        <p class="w3-text-grey">
+          In the picture on the left we can see a possible output for the hydra command.
+      </p>
+
+        
+        
+      </div>
+    </div>
+  </div>
+
   
 
   <!-- Robot -->
@@ -345,6 +404,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
+
+  
 
   <!-- Conclusions -->
   <div class="w3-row-padding w3-padding-64 w3-container" id="Conclusions">
